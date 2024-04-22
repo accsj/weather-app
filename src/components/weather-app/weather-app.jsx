@@ -51,6 +51,7 @@ function WeatherApp () {
             'mist': 'Névoa',
             'moderate rain': 'Chuva moderada',
             'overcast clouds': 'Nuvens nubladas',
+            'light snow': 'Pouca neve',
         };
         return weatherTranslations[description] || description;
     }, []);
