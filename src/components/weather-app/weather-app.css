@@ -14,3 +14,17 @@ body {
     border-radius: 25px;
     display: flex;
 }
+
+@media (max-width:800px) {
+    .weather-app-container {
+        height: 800px;
+        width: 500px;
+        display: block;
+    }
+}
+
+@media (max-width:600px) {
+    .weather-app-container {
+        width: 250px ;
+    }
+}

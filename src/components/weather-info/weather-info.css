@@ -61,13 +61,56 @@
 
 .umidade h3 {
     display: flex;
-    margin-right: 13.2rem;
+    margin-right: 13rem;
 }
 
 .todayPop, .todayHumidity, .todayWindSpeed {
     display: flex;
-    margin-left: 14rem;
     position: absolute;
+}
+
+@media (max-width:800px) {
+    .weather-info {
+        height: 55%;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .precipitacao, .umidade, .wind-speed {
+        font-size: 0.8rem;
+    }
+
+    .umidade h3 {
+        margin-right: 12.6rem !important;
+    } 
+    
+    .input_box {
+        margin-top: 10% !important;
+    }
+}
+
+@media (max-width:600px) {
+    .weather-info {
+        width: 100%;
+    }
+
+    .precipitacao, .umidade, .wind-speed {
+        display: flex;
+        margin-right: 2rem !important;
+    }
+
+    .weather-info-time h3 {
+        display: flex;
+        align-items: left !important;
+        justify-content: left !important;
+        text-align: left !important;
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 6rem !important;
+    }
+    
+    .input_box input {
+        font-size: 1rem !important;
+    }
 }
 
 

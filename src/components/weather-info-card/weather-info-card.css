@@ -43,3 +43,15 @@
     font-size: 2rem !important;
     margin-top: 0.5rem;
 }
+
+@media (max-width:600px) {
+    .weather-info-card div {
+        width: 50px ;
+        height: 100px;
+    }
+
+    .weather-info-card h4 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.5rem;
+    }    
+}

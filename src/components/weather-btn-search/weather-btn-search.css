@@ -22,3 +22,9 @@
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     transform: scale(1.02);
 }
+
+@media (max-width:600px) {
+    .weather-btn-search {
+        width: 220px;
+    }
+}

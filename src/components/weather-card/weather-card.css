@@ -66,3 +66,36 @@
 }
 
 
+@media (max-width:800px) {
+    .weather-card {
+        width: 100%;
+        height: 52%;
+    }
+
+    .weather-card-temp {
+        margin-top: 35% !important;
+        margin-right: 60% !important;
+    }
+}
+
+@media (max-width:600px) {
+    .weather-card {
+        height: 45%;
+    }
+
+    .weather-card-temp {
+        margin-top: 90% !important;
+        margin-right: 40% !important;
+    }
+
+    .weather-card-icon {
+        font-size: 2rem !important;
+        margin-left: 1rem;
+    }
+
+    .weather-card-temperatura {
+        font-size: 2rem !important;
+    }
+}
+
+
