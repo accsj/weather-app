@@ -1,0 +1,68 @@
+.weather-card {
+    background-color: white;
+    width: 52%;
+    height: 100%;
+    border-radius: 25px;
+    transform: scale(1.05) perspective(200px);  
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../../assets/images/background.jpg');
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.95;
+}
+
+.weather-card:hover {
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.weather-card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.weather-card-day-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 0.2rem;
+    position: absolute;
+    top: 1rem;
+}
+
+.weather-card-day {
+    font-size: 1.3rem;
+}
+
+.weather-card-location {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.weather-card-temp {
+    display: flex;
+    flex-direction: column;
+    margin-top: 65%;
+    margin-right: 45%;
+}
+
+.weather-card-icon {
+    font-size: 4rem;
+    margin-left: 1rem;
+}
+
+.weather-card-temperatura {
+    font-size: 3rem;
+}
+
+.weather-card-tempinfo {
+    font-size: 1.3rem;
+    width: 120%;
+}
+
+
