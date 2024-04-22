@@ -23,7 +23,7 @@ body {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:610px) {
     .weather-app-container {
         width: 250px ;
     }

@@ -78,7 +78,7 @@
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:610px) {
     .weather-card {
         height: 45%;
     }

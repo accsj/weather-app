@@ -23,7 +23,7 @@
     transform: scale(1.02);
 }
 
-@media (max-width:600px) {
+@media (max-width:610px) {
     .weather-btn-search {
         width: 220px;
     }
