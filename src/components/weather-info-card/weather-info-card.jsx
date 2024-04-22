@@ -1,7 +1,7 @@
 import './weather-info-card.css';
 import React,{ useState, useEffect } from 'react';
 
-function WeatherInfoCard ({temp, weatherMondayIcon, weatherTuesdayIcon, weatherWednesdayIcon, weatherThursdayIcon, weatherFridayIcon, weatherSaturdayIcon, weatherSundayIcon}) {
+function WeatherInfoCard ({temp, weatherMondayIcon, weatherTuesdayIcon, weatherWednesdayIcon, weatherThursdayIcon, weatherFridayIcon, weatherSaturdayIcon, weatherSundayIcon, weatherMondayTemp, weatherTuesdayTemp, weatherWednesdayTemp, weatherThursdayTemp, weatherFridayTemp, weatherSaturdayTemp, weatherSundayTemp}) {
     const [daysOfWeek, setDaysOfWeek] = useState([]);
 
     useEffect(() => {
@@ -18,6 +18,27 @@ function WeatherInfoCard ({temp, weatherMondayIcon, weatherTuesdayIcon, weatherW
         setDaysOfWeek(nextDaysOfWeek);
     }, []);
 
+    const getTemperatureForDay = (day) => {
+        switch (day) {
+            case 'Seg.':
+                return weatherMondayTemp;
+            case 'Ter.':
+                return weatherTuesdayTemp;
+            case 'Qua.':
+                return weatherWednesdayTemp;
+            case 'Qui.':
+                return weatherThursdayTemp;
+            case 'Sex.':
+                return weatherFridayTemp;
+            case 'Sáb.':
+                return weatherSaturdayTemp;
+            case 'Dom.':
+                return weatherSundayTemp;
+            default:
+                return null;
+        }
+    };
+
     return (
         <div className="weather-info-card-container">
             <div className="weather-info-card">
@@ -31,7 +52,7 @@ function WeatherInfoCard ({temp, weatherMondayIcon, weatherTuesdayIcon, weatherW
                         {day === 'Sáb.' && weatherSaturdayIcon && React.cloneElement(weatherSaturdayIcon, { className: 'weather-icon' })}
                         {day === 'Dom.' && weatherSundayIcon && React.cloneElement(weatherSundayIcon, { className: 'weather-icon' })}
                         <p>{day}</p>
-                        <h4>{Math.round(temp)}°C</h4>
+                        <h4>{Math.round(getTemperatureForDay(day))}°C</h4>
                     </div>
                 ))}
             </div>

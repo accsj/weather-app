@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import WeatherBtnSearch from '../weather-btn-search/weather-btn-search';
 import WeatherInfoCard from '../weather-info-card/weather-info-card';
 
-function WeatherInfo ({onSubmit, temp, weatherMondayIcon, weatherTuesdayIcon, weatherWednesdayIcon, weatherThursdayIcon, weatherFridayIcon, weatherSaturdayIcon, weatherSundayIcon, todayPop, todayHumidity, todayWindSpeed}) {
+function WeatherInfo ({onSubmit, temp, weatherMondayIcon, weatherTuesdayIcon, weatherWednesdayIcon, weatherThursdayIcon, weatherFridayIcon, weatherSaturdayIcon, weatherSundayIcon, todayPop, todayHumidity, todayWindSpeed, weatherMondayTemp, weatherTuesdayTemp, weatherWednesdayTemp, weatherThursdayTemp, weatherFridayTemp, weatherSaturdayTemp, weatherSundayTemp}) {
     const [locationInput, setLocationInput] = useState('');
 
     const handleSubmit = (event) => {
@@ -39,7 +39,7 @@ function WeatherInfo ({onSubmit, temp, weatherMondayIcon, weatherTuesdayIcon, we
                 </div>
             </div>
             <div className="weather-info-cards">
-                <WeatherInfoCard temp={temp} weatherMondayIcon={weatherMondayIcon} weatherTuesdayIcon={weatherTuesdayIcon} weatherWednesdayIcon={weatherWednesdayIcon} weatherThursdayIcon={weatherThursdayIcon} weatherFridayIcon={weatherFridayIcon} weatherSaturdayIcon={weatherSaturdayIcon} weatherSundayIcon={weatherSundayIcon}/>
+                <WeatherInfoCard temp={temp} weatherMondayIcon={weatherMondayIcon} weatherTuesdayIcon={weatherTuesdayIcon} weatherWednesdayIcon={weatherWednesdayIcon} weatherThursdayIcon={weatherThursdayIcon} weatherFridayIcon={weatherFridayIcon} weatherSaturdayIcon={weatherSaturdayIcon} weatherSundayIcon={weatherSundayIcon} weatherMondayTemp={weatherMondayTemp} weatherTuesdayTemp={weatherTuesdayTemp} weatherWednesdayTemp={weatherWednesdayTemp} weatherThursdayTemp={weatherThursdayTemp} weatherFridayTemp={weatherFridayTemp} weatherSaturdayTemp={weatherSaturdayTemp} weatherSundayTemp={weatherSundayTemp}/>
             </div>
             <form className='weather-location-form' onSubmit={handleSubmit}>
                 <div className="input_box">

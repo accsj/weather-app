@@ -29,6 +29,13 @@ function WeatherApp () {
     const [weatherFridayIcon, setWeatherFridayIcon] = useState();
     const [weatherSaturdayIcon, setWeatherSaturdayIcon] = useState();
     const [weatherSundayIcon, setWeatherSundayIcon] = useState();
+    const [weatherMondayTemp, setWeatherMondayTemp] = useState();
+    const [weatherTuesdayTemp, setWeatherTuesdayTemp] = useState();
+    const [weatherWednesdayTemp, setWeatherWednesdayTemp] = useState();
+    const [weatherThursdayTemp, setWeatherThursdayTemp] = useState();
+    const [weatherFridayTemp, setWeatherFridayTemp] = useState();
+    const [weatherSaturdayTemp, setWeatherSaturdayTemp] = useState();
+    const [weatherSundayTemp, setWeatherSundayTemp] = useState();
     const key = 'c27ab44a0b57e90136bdc0673c16ef56';
     const translateWeather = useCallback((description) => {
         const weatherTranslations = {
@@ -90,6 +97,13 @@ function WeatherApp () {
                 setCityName(response.data.city.name);
                 setCityCountry(response.data.city.country);
                 setTemp(response.data.list[0].main.temp);
+                setWeatherMondayTemp(response.data.list[1].main.temp);
+                setWeatherTuesdayTemp(response.data.list[2].main.temp);
+                setWeatherWednesdayTemp(response.data.list[3].main.temp);
+                setWeatherThursdayTemp(response.data.list[4].main.temp);
+                setWeatherFridayTemp(response.data.list[5].main.temp);
+                setWeatherSaturdayTemp(response.data.list[6].main.temp);
+                setWeatherSundayTemp(response.data.list[7].main.temp);
                 setTodayPop(response.data.list[0].pop);
                 setTodayHumidity(response.data.list[0].main.humidity);
                 setTodayWindSpeed(response.data.list[0].wind.speed);
@@ -134,6 +148,13 @@ function WeatherApp () {
             setCityName(response.data.city.name);
             setCityCountry(response.data.city.country);
             setTemp(response.data.list[0].main.temp);
+            setWeatherMondayTemp(response.data.list[1].main.temp);
+            setWeatherTuesdayTemp(response.data.list[2].main.temp);
+            setWeatherWednesdayTemp(response.data.list[3].main.temp);
+            setWeatherThursdayTemp(response.data.list[4].main.temp);
+            setWeatherFridayTemp(response.data.list[5].main.temp);
+            setWeatherSaturdayTemp(response.data.list[6].main.temp);
+            setWeatherSundayTemp(response.data.list[7].main.temp);
             const weatherDescription = response.data.list[0].weather[0].description;
             setWeatherTempDescription(translateWeather(weatherDescription));
             const weatherIconCodeCurrentDay = response.data.list[0].weather[0].icon;
@@ -169,7 +190,7 @@ function WeatherApp () {
     return (
         <main className="weather-app-container">
             <WeatherCard cityName={cityName} cityCountry={cityCountry} temp={temp} weatherTempDescription={weatherTempDescription} weatherIcon={weatherIcon}/>
-            <WeatherInfo onSubmit={handleSubmit} temp={temp} weatherMondayIcon={weatherMondayIcon} weatherTuesdayIcon={weatherTuesdayIcon} weatherWednesdayIcon={weatherWednesdayIcon} weatherThursdayIcon={weatherThursdayIcon} weatherFridayIcon={weatherFridayIcon} weatherSaturdayIcon={weatherSaturdayIcon} weatherSundayIcon={weatherSundayIcon} todayPop={todayPop} todayHumidity={todayHumidity} todayWindSpeed={todayWindSpeed}/>
+            <WeatherInfo onSubmit={handleSubmit} temp={temp} weatherMondayIcon={weatherMondayIcon} weatherTuesdayIcon={weatherTuesdayIcon} weatherWednesdayIcon={weatherWednesdayIcon} weatherThursdayIcon={weatherThursdayIcon} weatherFridayIcon={weatherFridayIcon} weatherSaturdayIcon={weatherSaturdayIcon} weatherSundayIcon={weatherSundayIcon} todayPop={todayPop} todayHumidity={todayHumidity} todayWindSpeed={todayWindSpeed} weatherMondayTemp={weatherMondayTemp} weatherTuesdayTemp={weatherTuesdayTemp} weatherWednesdayTemp={weatherWednesdayTemp} weatherThursdayTemp={weatherThursdayTemp} weatherFridayTemp={weatherFridayTemp} weatherSaturdayTemp={weatherSaturdayTemp} weatherSundayTemp={weatherSundayTemp} /> 
         </main>
     )
 }
