@@ -40,6 +40,7 @@
     align-items: left !important;
     justify-content: left !important;
     text-align: left !important;
+    cursor: default;
 }
 .weather-info-time h3 {
     display: flex;
