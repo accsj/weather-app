@@ -1,14 +1,19 @@
 import './weather-info.css';
-import React from 'react';
+import React, {useState} from 'react';
 import WeatherBtnSearch from '../weather-btn-search/weather-btn-search';
 import WeatherInfoCard from '../weather-info-card/weather-info-card';
 
 function WeatherInfo ({onSubmit, temp, weatherMondayIcon, weatherTuesdayIcon, weatherWednesdayIcon, weatherThursdayIcon, weatherFridayIcon, weatherSaturdayIcon, weatherSundayIcon, todayPop, todayHumidity, todayWindSpeed}) {
+    const [locationInput, setLocationInput] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const locationInput = event.target.elements.location.value;
         onSubmit(locationInput);
+        setLocationInput('');
+    };
+
+    const handleInputChange = (event) => {
+        setLocationInput(event.target.value);
     };
 
     return (
@@ -41,6 +46,8 @@ function WeatherInfo ({onSubmit, temp, weatherMondayIcon, weatherTuesdayIcon, we
                     <input 
                     type="text"
                     name='location' 
+                    value={locationInput}
+                    onChange={handleInputChange}
                     placeholder='Digite sua localidade'
                     required />
                 </div>
